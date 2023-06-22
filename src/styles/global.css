@@ -1,0 +1,461 @@
+.card {
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+  margin-bottom: 2rem;
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+}
+
+.face {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.back {
+  background-color: #00B8EB;
+  backface-visibility: hidden;
+  border: 2px solid #00B8EB;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.front-HTML {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-HTML::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #ef652a, #ef652a);
+}
+.front-HTML::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #ef652a, #ef652a);
+  animation-delay: -3s;
+}
+
+.front-CSS {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-CSS::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #33A9DC, #33A9DC);
+}
+.front-CSS::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #33A9DC, #33A9DC);
+  animation-delay: -3s;
+}
+
+.front-JavaScript {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-JavaScript::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #F7DF1E, #F7DF1E);
+}
+.front-JavaScript::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #F7DF1E, #F7DF1E);
+  animation-delay: -3s;
+}
+
+.front-PHP {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-PHP::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #6e81b6, #6e81b6);
+}
+.front-PHP::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #6e81b6, #6e81b6);
+  animation-delay: -3s;
+}
+
+.front-React {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-React::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #00d8ff, #00d8ff);
+}
+.front-React::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #00d8ff, #00d8ff);
+  animation-delay: -3s;
+}
+
+.front-TailWindCSS {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-TailWindCSS::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #07B6D5, #07B6D5);
+}
+.front-TailWindCSS::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #07B6D5, #07B6D5);
+  animation-delay: -3s;
+}
+
+.front-Laravel {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-Laravel::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #FF2D20, #FF2D20);
+}
+.front-Laravel::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #FF2D20, #FF2D20);
+  animation-delay: -3s;
+}
+
+.front-PostgreSQL {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-PostgreSQL::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #336791, #336791);
+}
+.front-PostgreSQL::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #336791, #336791);
+  animation-delay: -3s;
+}
+
+.front-Photoshop {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-Photoshop::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #00C8FF, #00C8FF);
+}
+.front-Photoshop::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #00C8FF, #00C8FF);
+  animation-delay: -3s;
+}
+
+.front-VSCode {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-VSCode::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #007ACC, #007ACC);
+}
+.front-VSCode::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #007ACC, #007ACC);
+  animation-delay: -3s;
+}
+
+.front-Github {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-Github::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #fff, #fff);
+}
+.front-Github::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #fff, #fff);
+  animation-delay: -3s;
+}
+
+.front-Git {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-Git::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #F05133, #F05133);
+}
+.front-Git::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #F05133, #F05133);
+  animation-delay: -3s;
+}
+
+.front-NextJS {
+  background-color: #0B0F13;
+  transform: rotateY(180deg);
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+  border-radius: 8px;
+}
+.front-NextJS::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #fff, #fff);
+}
+.front-NextJS::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 15rem;
+  height: 15rem;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  background: linear-gradient(0deg, transparent, #fff, #fff);
+  animation-delay: -3s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg) translateX();
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=global.css.map */

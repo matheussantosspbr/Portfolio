@@ -1,0 +1,119 @@
+/* ===== Variaveis ===== */
+
+:root {
+    /*Cores*/
+    --cor-primaria: #00b8eb;
+    --cor-segundaria: #2f3944;
+    --pleacehouder: #ffffff91;
+    --footer: #080b0e;
+    --body: #0b0f13;
+    --letras: #fff;
+  }
+  
+  /* ===== Layout ===== */
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 100%;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--cor-primaria);
+    border-radius: 30px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--body);
+    border-radius: 30px;
+  }
+
+   /* ===== PAGE NOT FOUND ===== */
+
+  .s0 {
+    fill: url(#g1)
+  }
+
+  .s1 {
+    opacity: .2;
+    mix-blend-mode: multiply;
+    fill: #000000
+  }
+
+  .s2 {
+    fill: #ffffff
+  }
+
+  .s3 {
+    fill: #828ca0
+  }
+
+  .s4 {
+    fill: #2d3246
+  }
+
+  .s5 {
+    opacity: .3;
+    mix-blend-mode: multiply;
+    fill: #000000
+  }
+
+  .s6 {
+    fill: #141e28
+  }
+
+  .s7 {
+    opacity: .5;
+    mix-blend-mode: multiply;
+    fill: #000000
+  }
+
+  .s8 {
+    opacity: .1;
+    mix-blend-mode: multiply;
+    fill: #000000
+  }
+
+  .s9 {
+    fill: #d8d7dc
+  }
+
+  .s10 {
+    fill: #c6c3ca
+  }
+
+  .s11 {
+    opacity: .5;
+    fill: #ffffff
+  }
+
+  .s12 {
+    opacity: .8;
+    fill: #ffffff
+  }
+
+  .s13 {
+    fill: #2d3c5a
+  }
+
+  .s14 {
+    fill: #5af0fa
+  }
+
+  .s15 {
+    fill: #a5a4ac
+  }
+
+  .s16 {
+    fill: #4d4d4d
+  }
+
+.cardProjects{
+  background: rgba(0, 0, 0, 0.50);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/* ______________________ */

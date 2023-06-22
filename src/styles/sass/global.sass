@@ -1,0 +1,61 @@
+@use 'variables'
+@use 'mixins'
+
+.card
+  display: flex
+  justify-content: center
+  transform-style: preserve-3d
+  transition: all .5s
+  margin-bottom: 2rem
+  width: 15rem
+  height: 15rem
+  position: relative
+
+.face
+  width: 15rem
+  height: 15rem
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  color: white
+  position: absolute
+  border-radius: 10px
+  overflow: hidden
+  cursor: pointer
+
+.back
+  background-color: #00B8EB
+  backface-visibility: hidden
+  border: 2px solid #00B8EB
+
+
+.flip
+  transform: rotateY(180deg)
+
+
+@each $nome, $cor in variables.$cores
+  .front-#{$nome}   
+    background-color:#0B0F13
+    transform: rotateY(180deg)
+    width: 15rem
+    height: 15rem
+
+    position: relative
+    border-radius: 8px
+    &::before
+      @include mixins.afterAndBeforeFront($cor)
+    
+
+    &::after
+      @include mixins.afterAndBeforeFront($cor)
+      animation-delay: -3s
+
+@keyframes animate
+  0%
+    transform: rotate(0deg) translateX()
+  
+  100%
+    transform: rotate(360deg)
+  
+
