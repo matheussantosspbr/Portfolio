@@ -1,18 +1,24 @@
-import ScrollToTop from "react-scroll-to-top" 
+export default function ButtonTop() {
+  function scrollToTop() {
+    return window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
 
-export default function ButtonTop(){
-    return (
-        <ScrollToTop className="flex items-center justify-center animate-bounce" 
-        style={
-            {
-                background : '#0B0F13',
-                width : '3.25rem',
-                height : '3.25rem',
-                boxShadow : 'none',
-                border : '2px solid #00B8EB',
-                borderRadius : '100%',
-            }
+  function test() {
+    console.log("clicou");
+  }
+  console.log("Testing");
+  console.log(1+2)
 
-    } color="#00B8EB" smooth/>
-   )
+  return (
+    <button
+      type="button"
+      onClick={test}
+      className="fixed bottom-10 right-10 text-cyan-500 flex items-center justify-center animate-bounce bg-[#0B0F13] w-[3.25rem] h-[3.25rem] border-2 border-cyan-500 rounded-full"
+    >
+      <i className="fa-solid fa-arrow-up text-2xl"></i>
+    </button>
+  );
 }
