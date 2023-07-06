@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router'
-
 export function Idade() {
     const today = new Date();
     const birthDate = new Date("2004/09/02");
@@ -11,12 +9,4 @@ export function Idade() {
     }
     
     return age;
-}
-
-export class Router{
-    Pathname(){
-
-        const router = useRouter()
-        return router.asPath
-    }
 }
