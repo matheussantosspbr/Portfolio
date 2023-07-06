@@ -22,22 +22,11 @@ export default function Portfolio() {
                 title="Portfólio"
               />
               <CardProjects
-                linguagens="html,css,js"
-                url="/projetos/RegraDe3.avif"
-                alt="Regra de 3"
-                title="Regra de 3"
-              />
-              <CardProjects
-                linguagens="html,css,js,php"
-                url="/projetos/SistemaDeLogin.avif"
-                alt="Sistema de Login"
-                title="Sistema de Login"
-              />
-              <CardProjects
                 linguagens="react,tailwindcss"
-                url="/projetos/conversorDeMoeda.avif"
-                alt="Conversor de Moedas"
-                title="Conversor de Moedas"
+                url="conversorDeMoeda.avif"
+                alt="Conversor De Moeda"
+                title="Conversor de Moeda"
+                link="https://precohoje.info/"
               />
             </div>
           </div>
