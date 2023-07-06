@@ -31,7 +31,6 @@ export default function Home() {
               <CardProjects
                 linguagens="react,tailwindcss"
                 url="conversorDeMoeda.avif"
-                alt="Conversor De Moeda"
                 title="Conversor de Moeda"
                 link="https://precohoje.info/"
               />

@@ -18,13 +18,11 @@ export default function Portfolio() {
               <CardProjectsLayout2
                 linguagens="react,tailwindcss"
                 url="/projetos/site.avif"
-                alt="Portfólio"
                 title="Portfólio"
               />
               <CardProjects
                 linguagens="react,tailwindcss"
                 url="conversorDeMoeda.avif"
-                alt="Conversor De Moeda"
                 title="Conversor de Moeda"
                 link="https://precohoje.info/"
               />
