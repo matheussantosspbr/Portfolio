@@ -1,6 +1,7 @@
 import CardTecnologia from "../components/CardTecnologia"
 
 export default function Ferramentas() {
+    document.title = 'Início'
     return (
 
         <section className='flex mt-8 items-center justify-center mb-8 flex-col pl-8 pr-8 xs:pl-0 xs:pr-0'>
