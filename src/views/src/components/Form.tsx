@@ -7,9 +7,9 @@ export default function FormContato() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     
-    const publicToken = ( process.env.NEXT_PUBLIC_TOKEN_EMAILJS || '').toString()
-    const template = (process.env.NEXT_PUBLIC_TEMPLATE_EMAILJS || '').toString()
-    const service = (process.env.NEXT_PUBLIC_SERVICE_EMAILJS || '').toString()
+    const publicToken = ( import.meta.env.VITE_PUBLIC_TOKEN_EMAILJS|| '').toString()
+    const template = (import.meta.env.VITE_TEMPLATE_EMAILJS || '').toString()
+    const service = (import.meta.env.VITE_SERVICE_EMAILJS || '').toString()
 
     function sendEmail(e: { preventDefault: () => void }){
         e.preventDefault()

@@ -1,6 +1,7 @@
 import FormContato from "../components/Form"
 
 export default function MeEnvieUmaMensagem() {
+    document.title = 'Início'
     return (
 
         <section className='mt-8 w-full flex items-center flex-col justify-center pl-8 pr-8'>

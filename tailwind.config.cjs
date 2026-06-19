@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/**/*.tsx'],
   theme: {
     extend: {
       colors:{
@@ -23,8 +19,7 @@ module.exports = {
           'postgreSQl': '#336791',
           'react': '#00d8ff',
           'laravel' : '#FF2D20',
-          'tailwindcss' : '#07B6D5',
-          'nextJS' : '#fff'
+          'tailwindcss' : '#07B6D5'
         },
         ferramentas:{
           'photoshop': '#00C8FF',
@@ -78,5 +73,6 @@ module.exports = {
       
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow')],
 }

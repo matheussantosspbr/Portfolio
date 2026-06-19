@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import {NavLink} from 'react-router-dom'
 
 interface Props{
     title: string;
@@ -16,7 +16,7 @@ export default function Button({ title, type = 'PRIMARY',width, add, url = ""}: 
 
     return (
         
-        <Link href={url} aria-label={title} className={`
+        <NavLink to={url} aria-label={title} className={`
             ${width}
             rounded-3xl
             h-10
@@ -39,6 +39,6 @@ export default function Button({ title, type = 'PRIMARY',width, add, url = ""}: 
             }>
             {title}
         </button>
-        </Link>
+        </NavLink>
     )
 }

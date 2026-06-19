@@ -5,9 +5,10 @@ interface Props{
     arquivo: string;
     colorStroke: string;
     color: string;
+    alt:string;
   }
 
-  export default function CardTecnologia({linguagem, arquivo,colorStroke, color}: Props ){
+  export default function CardTecnologia({linguagem, arquivo,colorStroke,alt, color}: Props ){
     const [flip, setFlip] = useState(false)
 
     function handleFlip() {
@@ -27,7 +28,7 @@ interface Props{
                 </svg>
               </div>
               <figure className="relative w-16 -top-[5.2rem] left-[5.2rem]">
-                  <img src={`/linguagens/${arquivo}.svg`} alt={`Icone ${linguagem}`} />
+                  <img src={`/linguagens/${arquivo}.svg`} alt={alt} />
               </figure>
               </div>
               <p className="text-white w-full text-center font-medium">{linguagem}</p>
