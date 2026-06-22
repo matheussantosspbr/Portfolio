@@ -9,7 +9,10 @@ const links = [
   { href: "#projetos", label: "Projetos" },
   { href: "#skills", label: "Skills" },
   { href: "#experiencia", label: "Experiência" },
+  { href: "#casos", label: "Estudos de caso" },
+  { href: "#opensource", label: "Open Source" },
   { href: "#blog", label: "Blog" },
+  { href: "#certificacoes", label: "Certificações" },
 ];
 
 export default function Header() {
@@ -30,8 +33,8 @@ export default function Header() {
         </Link>
 
         {/* Navegação desktop */}
-        <nav className="hidden md:block">
-          <ul className="flex items-center gap-8">
+        <nav className="hidden lg:block">
+          <ul className="flex items-center gap-5">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
@@ -60,7 +63,7 @@ export default function Header() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
-          className="flex h-11 w-11 items-center justify-center rounded-lg text-2xl text-white transition hover:text-primary md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg text-2xl text-white transition hover:text-primary lg:hidden"
         >
           <i
             className={open ? "fa-solid fa-xmark" : "fa-solid fa-bars"}
@@ -73,7 +76,7 @@ export default function Header() {
       {open && (
         <nav
           id="mobile-menu"
-          className="border-t border-white/10 bg-setup-gray-900 md:hidden"
+          className="border-t border-white/10 bg-setup-gray-900 lg:hidden"
         >
           <ul className="mx-auto flex max-w-6xl flex-col px-4 py-2">
             {links.map((link) => (

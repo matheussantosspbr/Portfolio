@@ -11,21 +11,9 @@ interface Certification {
 
 const certifications: Certification[] = [
   {
-    name: "Nome da Certificação",
-    institution: "Instituição / Plataforma",
-    date: "2025",
-    url: "https://example.com",
-  },
-  {
-    name: "Outro Curso Concluído",
-    institution: "Instituição / Plataforma",
-    date: "2024",
-  },
-  {
-    name: "Mais uma Formação",
-    institution: "Instituição / Plataforma",
-    date: "2023",
-    url: "https://example.com",
+    name: "Análise e Desenvolvimento de Sistemas",
+    institution: "UFBRA",
+    date: "Cursando",
   },
 ];
 
