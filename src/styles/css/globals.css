@@ -9,6 +9,18 @@
   --background-image-galaxy: url(/assets/imgs/fundo_cabecalho.avif);
 }
 
+/* entrada do modal: leve fade + slide-up */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @layer base {
   /* rolagem suave ao clicar nos links da navegação */
   html {
