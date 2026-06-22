@@ -161,7 +161,7 @@ function ContributionModal({ contribution, onClose }: ContributionModalProps) {
 
         <p
           id={descId}
-          className="mt-4 max-h-[50vh] overflow-y-auto text-sm leading-relaxed text-gray-300"
+          className="mt-4 max-h-[50vh] overflow-y-auto whitespace-pre-line text-sm leading-relaxed text-gray-300"
         >
           {contribution.description}
         </p>
