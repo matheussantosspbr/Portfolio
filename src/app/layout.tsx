@@ -25,12 +25,15 @@ export default function RootLayout({
       className={`${inter.variable} bg-setup-gray-900 h-full antialiased`}
     >
       <head>
-        <script
-          src="https://kit.fontawesome.com/22c21b90be.js"
-          crossOrigin="anonymous"
-        ></script>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
       </head>
-      <body className="min-h-full flex flex-col font-sans text-gray-200">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col font-sans text-gray-200"
+      >
         {children}
       </body>
     </html>
