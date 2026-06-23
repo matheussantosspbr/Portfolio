@@ -31,7 +31,10 @@ const articles: Article[] = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="mx-auto w-full max-w-5xl scroll-mt-24 px-4 py-20">
+    <section
+      id="blog"
+      className="mx-auto w-full max-w-5xl scroll-mt-24 px-4 py-20"
+    >
       <SectionTitle
         eyebrow="Escrita"
         title="Blog & Artigos"
@@ -45,11 +48,15 @@ export default function Blog() {
             className="flex flex-col rounded-xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/50"
           >
             <div className="mb-2 flex items-center gap-2 text-xs text-gray-400">
-              <span className="font-medium text-primary">{article.platform}</span>
+              <span className="font-medium text-primary">
+                {article.platform}
+              </span>
               <span aria-hidden="true">•</span>
               <time>{article.date}</time>
             </div>
-            <h3 className="text-lg font-semibold text-white">{article.title}</h3>
+            <h3 className="text-lg font-semibold text-white">
+              {article.title}
+            </h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-300">
               {article.summary}
             </p>
@@ -61,7 +68,10 @@ export default function Blog() {
               className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:brightness-110"
             >
               Ler artigo
-              <i className="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+              <i
+                className="fa-solid fa-arrow-right text-xs"
+                aria-hidden="true"
+              ></i>
             </Link>
           </article>
         ))}

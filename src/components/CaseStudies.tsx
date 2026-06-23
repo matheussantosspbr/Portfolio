@@ -48,7 +48,10 @@ function Block({ label, text }: { label: string; text: string }) {
 
 export default function CaseStudies() {
   return (
-    <section id="casos" className="mx-auto w-full max-w-5xl scroll-mt-24 px-4 py-20">
+    <section
+      id="casos"
+      className="mx-auto w-full max-w-5xl scroll-mt-24 px-4 py-20"
+    >
       <SectionTitle
         eyebrow="Aprofundando"
         title="Estudos de caso"

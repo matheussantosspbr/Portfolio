@@ -75,7 +75,10 @@ export default function CartProject({
               aria-label={`Ver o projeto ${title} online`}
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-gray-900 transition duration-200 hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
-              <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              <i
+                className="fa-solid fa-arrow-up-right-from-square"
+                aria-hidden="true"
+              ></i>
               Ver projeto
             </Link>
           )}

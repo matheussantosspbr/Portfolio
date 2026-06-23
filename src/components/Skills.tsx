@@ -10,7 +10,8 @@ interface Category {
 const categories: Category[] = [
   {
     name: "Front-end",
-    description: "Construção de interfaces responsivas, acessíveis e performáticas.",
+    description:
+      "Construção de interfaces responsivas, acessíveis e performáticas.",
     stacks: [
       "HTML5",
       "CSS3",
@@ -26,7 +27,8 @@ const categories: Category[] = [
   },
   {
     name: "Back-end",
-    description: "APIs, regras de negócio e integração de serviços no servidor.",
+    description:
+      "APIs, regras de negócio e integração de serviços no servidor.",
     stacks: ["Node.js", "Express", "NestJS", "PHP", "Laravel", "FastAPI"],
   },
   {
@@ -47,7 +49,7 @@ const categories: Category[] = [
       "Postman",
       "Axiom",
       "VPS",
-      "Coolify"
+      "Coolify",
     ],
   },
   {
@@ -59,7 +61,10 @@ const categories: Category[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-20">
+    <section
+      id="skills"
+      className="mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-20"
+    >
       <SectionTitle
         eyebrow="Minha stack"
         title="Skills"
@@ -73,7 +78,9 @@ export default function Skills() {
             className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:border-primary/40"
           >
             <div>
-              <h3 className="text-lg font-semibold text-white">{category.name}</h3>
+              <h3 className="text-lg font-semibold text-white">
+                {category.name}
+              </h3>
               <p className="mt-1 text-sm leading-relaxed text-gray-400">
                 {category.description}
               </p>

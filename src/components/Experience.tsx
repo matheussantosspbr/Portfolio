@@ -24,7 +24,7 @@ interface Company {
 }
 
 const experiences: Company[] = [
-    {
+  {
     company: "Comhub",
     location: "São Paulo, Brasil",
     roles: [
@@ -37,9 +37,22 @@ const experiences: Company[] = [
           "Implementação de testes automatizados utilizando Vitest.",
           "Monitoramento e observabilidade com Axiom.",
           "Implementação de estratégias de cache com Redis para otimização de performance.",
-          "Suporte técnico ao time de integrações, garantindo estabilidade e eficiência nas conexões entre sistemas."
+          "Suporte técnico ao time de integrações, garantindo estabilidade e eficiência nas conexões entre sistemas.",
         ],
-        tags: ["Node.js", "Next.js", "Prisma", "React", "Docker, Docker Compose", "Linux", "Zustand", "Redis", "Express", "TypeScript", "Axiom", "Vitest"],
+        tags: [
+          "Node.js",
+          "Next.js",
+          "Prisma",
+          "React",
+          "Docker, Docker Compose",
+          "Linux",
+          "Zustand",
+          "Redis",
+          "Express",
+          "TypeScript",
+          "Axiom",
+          "Vitest",
+        ],
       },
     ],
   },
@@ -50,9 +63,7 @@ const experiences: Company[] = [
       {
         title: "Desenvolvedor Full Stack Junior",
         period: "Fev/2023 — Jul/2024",
-        highlights: [
-          "Automações com Python e uso de IA.",
-        ],
+        highlights: ["Automações com Python e uso de IA."],
         tags: ["Python"],
       },
       {
@@ -64,7 +75,7 @@ const experiences: Company[] = [
           "Consultas usando API RESTFULL",
           "Versionamento de código Git - GitHub",
           "Automação de projetos com Python",
-          "Arquitetura e modelagem de banco de dados"
+          "Arquitetura e modelagem de banco de dados",
         ],
         tags: ["Laravel", "PHP", "MySQL", "Jquery", "Git", "Github", "Linux"],
       },

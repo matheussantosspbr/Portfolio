@@ -4,7 +4,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Matheus Santos — Links",
-  description: "Todos os meus links em um só lugar: portfólio, redes sociais e contato.",
+  description:
+    "Todos os meus links em um só lugar: portfólio, redes sociais e contato.",
 };
 
 // ── Seus links — edite, adicione ou remova à vontade ─────────────────
@@ -17,11 +18,34 @@ interface LinkItem {
 
 const links: LinkItem[] = [
   { label: "Portfólio", href: "/", icon: "fa-solid fa-globe" },
-  { label: "GitHub", href: "https://github.com/matheussantosspbr", icon: "fa-brands fa-github", external: true },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/matheussantosspbr/", icon: "fa-brands fa-linkedin-in", external: true },
-  { label: "Instagram", href: "https://www.instagram.com/matheus_santos_oficial.br/", icon: "fa-brands fa-instagram", external: true },
-  { label: "Enviar e-mail", href: "mailto:contato@matheussantos.tech", icon: "fa-regular fa-envelope" },
-  { label: "Baixar currículo", href: "/assets/curriculo.pdf", icon: "fa-solid fa-download" },
+  {
+    label: "GitHub",
+    href: "https://github.com/matheussantosspbr",
+    icon: "fa-brands fa-github",
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/matheussantosspbr/",
+    icon: "fa-brands fa-linkedin-in",
+    external: true,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/matheus_santos_oficial.br/",
+    icon: "fa-brands fa-instagram",
+    external: true,
+  },
+  {
+    label: "Enviar e-mail",
+    href: "mailto:contato@matheussantos.tech",
+    icon: "fa-regular fa-envelope",
+  },
+  {
+    label: "Baixar currículo",
+    href: "/assets/curriculo.pdf",
+    icon: "fa-solid fa-download",
+  },
 ];
 
 export default function LinksPage() {

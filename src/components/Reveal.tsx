@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 
 interface RevealProps {
   children: ReactNode;
@@ -13,7 +13,11 @@ interface RevealProps {
  * Anima a entrada do conteúdo (fade + slide-up) quando ele entra na viewport.
  * Respeita `prefers-reduced-motion`: nesse caso mostra direto, sem animar.
  */
-export default function Reveal({ children, delay = 0, className = "" }: RevealProps) {
+export default function Reveal({
+  children,
+  delay = 0,
+  className = "",
+}: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
