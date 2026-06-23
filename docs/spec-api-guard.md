@@ -9,9 +9,10 @@
    rate limit usa **store in-memory** (sem Redis). A interface fica plugável
    apenas como porta de saída para um futuro multi-container.
 2. **Limite `send-message`:** 5 req / 60s por IP.
-3. **Allowlist de origens** via env `ALLOWED_ORIGINS` (CSV). Default:
-   `https://matheussantos.tech,https://www.matheussantos.tech` +
-   `http://localhost:3000` em dev.
+3. **Allowlist de origens** fixa no **código** (`src/lib/api/origin.ts`,
+   const `ALLOWED_ORIGINS`) — **não** vem de env. Inclui
+   `https://matheussantos.tech`, `https://www.matheussantos.tech` e
+   `http://localhost:3000`. Para alterar, edite a lista.
 4. **Testes:** adicionar **Vitest** (aprovado).
 5. **Formulário:** ligar o form ao `/api/send-message` via `fetch` same-origin
    (substitui o `mailto:`), com estados de loading/sucesso/erro.
