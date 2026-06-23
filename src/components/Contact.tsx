@@ -13,7 +13,8 @@ import {
 import SectionTitle from "./SectionTitle";
 
 type Field = "name" | "email" | "message";
-type FormState = Record<Field, string>;
+// `phone` é opcional: faz parte do estado e do envio, mas não da validação.
+type FormState = Record<Field, string> & { phone: string };
 type Errors = Partial<Record<Field, string>>;
 
 // Site key pública do Turnstile (segura no client). Se ausente, o widget não
@@ -72,11 +73,11 @@ export default function Contact() {
     name: "",
     email: "",
     message: "",
+    phone: "",
   });
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState("");
-  // honeypot: preenchido apenas por bots (campo escondido)
   const [honeypot, setHoneypot] = useState("");
   // Turnstile
   const [turnstileToken, setTurnstileToken] = useState("");
@@ -175,7 +176,7 @@ export default function Contact() {
       if (res.ok) {
         setStatus("success");
         setFeedback("Mensagem enviada! Em breve eu retorno.");
-        setForm({ name: "", email: "", message: "" });
+        setForm({ name: "", email: "", message: "", phone: "" });
         setErrors({});
         resetTurnstile();
         return;
@@ -200,9 +201,11 @@ export default function Contact() {
     }
   };
 
-  const fieldClasses = (field: Field) =>
+  const fieldClasses = (field: Field | "phone") =>
     `w-full rounded-lg border bg-white/5 px-4 py-3 text-white placeholder:text-gray-500 transition focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
-      errors[field] ? "border-red-500" : "border-white/15 focus:border-primary"
+      field !== "phone" && errors[field]
+        ? "border-red-500"
+        : "border-white/15 focus:border-primary"
     }`;
 
   return (
@@ -287,6 +290,25 @@ export default function Contact() {
 
           <div>
             <label
+              htmlFor="phone"
+              className="mb-1.5 block text-sm font-medium text-gray-200"
+            >
+              Telefone <span className="text-gray-500">(opcional)</span>
+            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              value={form.phone}
+              onChange={handleChange}
+              className={fieldClasses("phone")}
+              placeholder="(11) 99999-9999"
+            />
+          </div>
+
+          <div>
+            <label
               htmlFor="message"
               className="mb-1.5 block text-sm font-medium text-gray-200"
             >
@@ -315,7 +337,6 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Honeypot: escondido de humanos; bots tendem a preencher. */}
           <input
             type="text"
             name="website"
