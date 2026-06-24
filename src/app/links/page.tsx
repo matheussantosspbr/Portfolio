@@ -31,12 +31,6 @@ const links: LinkItem[] = [
     external: true,
   },
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/matheus_santos_oficial.br/",
-    icon: "fa-brands fa-instagram",
-    external: true,
-  },
-  {
     label: "Enviar e-mail",
     href: "mailto:contato@matheussantos.tech",
     icon: "fa-regular fa-envelope",
