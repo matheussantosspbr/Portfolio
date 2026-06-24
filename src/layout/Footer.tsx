@@ -6,18 +6,6 @@ export default function Footer() {
       <ul className="flex w-full items-center justify-center mb-2 gap-2.5 [&>li]:w-10">
         <li>
           <Link
-            href="https://www.instagram.com/matheus_santos_oficial.br/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <span className="w-10 h-10 flex items-center justify-center text-xl text-white border-2 rounded-full hover:bg-cyan-500 hover:text-gray-900 hover:border-cyan-500">
-              <i className="fa-brands fa-instagram"></i>
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Link
             href="https://www.linkedin.com/in/matheussantosspbr/"
             target="_blank"
             rel="noopener noreferrer"
