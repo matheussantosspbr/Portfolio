@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { ALLOWED_ORIGINS, isAllowedOrigin } from "../origin";
+import { ALLOWED_ORIGINS, isAllowedOrigin } from "../app/api/middleware/origin";
 
 const OK = ALLOWED_ORIGINS[0]; // origem permitida pela allowlist do código
 

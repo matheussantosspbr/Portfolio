@@ -1,12 +1,12 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { withApiGuard } from "../guard";
-import { createMemoryRateLimiter } from "../rate-limit";
+import { withApiGuard } from "../app/api/middleware/guard";
+import { createMemoryRateLimiter } from "../app/api/middleware/rate-limit";
 
 afterEach(() => {
   delete process.env.API_KEY;
 });
 
-// origem fixa permitida pela allowlist do código (src/lib/api/origin.ts)
+// origem fixa permitida pela allowlist do código (src/app/api/middleware/origin.ts)
 const OK_ORIGIN = "http://localhost:3000";
 
 function req(headers: Record<string, string> = {}): Request {

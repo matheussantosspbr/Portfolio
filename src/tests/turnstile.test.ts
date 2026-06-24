@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { verifyTurnstile } from "../turnstile";
+import { verifyTurnstile } from "../lib/api/turnstile";
 
 afterEach(() => {
   delete process.env.TURNSTILE_SECRET_KEY;

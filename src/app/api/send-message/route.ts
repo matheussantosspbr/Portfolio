@@ -1,8 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { withApiGuard } from "@/lib/api/guard";
+import { withApiGuard } from "@/app/api/middleware/guard";
+import { getClientIp } from "@/app/api/middleware/rate-limit";
 import { isHoneypotTriggered } from "@/lib/api/honeypot";
-import { getClientIp } from "@/lib/api/rate-limit";
 import { isTurnstileEnabled, verifyTurnstile } from "@/lib/api/turnstile";
 
 export async function POST(request: NextRequest) {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createMemoryRateLimiter, getClientIp } from "../rate-limit";
+import { createMemoryRateLimiter, getClientIp } from "../app/api/middleware/rate-limit";
 
 describe("createMemoryRateLimiter", () => {
   it("permite requisições dentro do limite", () => {
