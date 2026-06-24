@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import { getClientIp } from "../http/client-ip";
 import { isValidApiKey } from "./api-key";
 import { isAllowedOrigin } from "./origin";
-import { getClientIp, type RateLimiter, rateLimiter } from "./rate-limit";
+import { type RateLimiter, rateLimiter } from "./rate-limit";
 
 export interface GuardOptions {
   requireApiKey?: boolean;

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createMemoryRateLimiter, getClientIp } from "../app/api/middleware/rate-limit";
+import { createMemoryRateLimiter } from "../server/security/rate-limit";
 
 describe("createMemoryRateLimiter", () => {
   it("permite requisições dentro do limite", () => {
@@ -42,25 +42,5 @@ describe("createMemoryRateLimiter", () => {
     limiter.consume("a", 1, 1000);
     expect(limiter.consume("a", 1, 1000).allowed).toBe(false);
     expect(limiter.consume("b", 1, 1000).allowed).toBe(true);
-  });
-});
-
-describe("getClientIp", () => {
-  it("usa o primeiro IP de x-forwarded-for", () => {
-    const req = new Request("http://x", {
-      headers: { "x-forwarded-for": "1.1.1.1, 2.2.2.2" },
-    });
-    expect(getClientIp(req)).toBe("1.1.1.1");
-  });
-
-  it("cai para x-real-ip", () => {
-    const req = new Request("http://x", {
-      headers: { "x-real-ip": "3.3.3.3" },
-    });
-    expect(getClientIp(req)).toBe("3.3.3.3");
-  });
-
-  it("retorna 'unknown' sem headers", () => {
-    expect(getClientIp(new Request("http://x"))).toBe("unknown");
   });
 });

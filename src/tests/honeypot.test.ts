@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { HONEYPOT_FIELD, isHoneypotTriggered } from "../lib/api/honeypot";
+import {
+  HONEYPOT_FIELD,
+  isHoneypotTriggered,
+} from "../server/security/honeypot";
 
 describe("isHoneypotTriggered", () => {
   it("retorna false quando o campo está vazio/ausente", () => {

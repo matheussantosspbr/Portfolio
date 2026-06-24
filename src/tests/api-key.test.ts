@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { isValidApiKey } from "../app/api/middleware/api-key";
+import { isValidApiKey } from "../server/security/api-key";
 
 afterEach(() => {
   delete process.env.API_KEY;

@@ -21,6 +21,13 @@ export interface RateLimiter {
   ): RateLimitResult | Promise<RateLimitResult>;
 }
 
+// Implementação síncrona (em memória). É atribuível a `RateLimiter` — um retorno
+// `RateLimitResult` é subtipo da união sync|async — então serve a quem depende da
+// interface geral, sem forçar quem usa o store em memória a tratar uma Promise.
+export interface SyncRateLimiter extends RateLimiter {
+  consume(key: string, limit: number, windowMs: number): RateLimitResult;
+}
+
 interface Bucket {
   count: number;
   resetAt: number;
@@ -31,7 +38,7 @@ const MAX_BUCKETS = 10_000;
 
 export function createMemoryRateLimiter(
   now: () => number = Date.now,
-): RateLimiter {
+): SyncRateLimiter {
   const buckets = new Map<string, Bucket>();
 
   return {
@@ -68,19 +75,3 @@ export function createMemoryRateLimiter(
 
 /** Instância padrão usada pela aplicação. */
 export const rateLimiter = createMemoryRateLimiter();
-
-/**
- * Extrai o IP do cliente. Atrás de um reverse proxy (Docker/VPS), o IP real
- * vem em `x-forwarded-for` (primeiro da lista). O proxy precisa repassar esse
- * header. Cai para `x-real-ip` e, por fim, "unknown".
- */
-export function getClientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) {
-    const first = forwarded.split(",")[0]?.trim();
-    if (first) return first;
-  }
-  const realIp = request.headers.get("x-real-ip");
-  if (realIp) return realIp.trim();
-  return "unknown";
-}
