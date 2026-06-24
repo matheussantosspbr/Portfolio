@@ -6,7 +6,7 @@ const projects: Project[] = [
   {
     title: "Portifólio",
     description: "Breve descrição do problema que esse projeto resolve.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
+    tags: ["Next.js", "TypeScript", "Tailwind", "Nginx"],
     repoUrl: "https://github.com/matheussantosspbr/Portfolio",
     liveUrl: "http://matheussantos.tech",
   },
