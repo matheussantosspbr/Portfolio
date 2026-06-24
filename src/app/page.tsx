@@ -1,8 +1,6 @@
 import Link from "next/link";
 import About from "@/components/About";
 import BackToTop from "@/components/BackToTop";
-import Blog from "@/components/Blog";
-import CaseStudies from "@/components/CaseStudies";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Divider from "@/components/Divider";
@@ -42,7 +40,7 @@ export default function Home() {
               Entrar em contato
             </Link>
             <Link
-              href="/assets/curriculo.pdf"
+              href="/assets/pdfs/curriculo.pdf"
               download
               className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:border-primary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
@@ -80,19 +78,7 @@ export default function Home() {
       <Divider />
 
       <Reveal>
-        <CaseStudies />
-      </Reveal>
-
-      <Divider type="SECONDARY" />
-
-      <Reveal>
         <OpenSource />
-      </Reveal>
-
-      <Divider />
-
-      <Reveal>
-        <Blog />
       </Reveal>
 
       <Divider type="SECONDARY" />
@@ -101,7 +87,7 @@ export default function Home() {
         <Certifications />
       </Reveal>
 
-      <Divider />
+      <Divider/>
 
       <Reveal>
         <Contact />
