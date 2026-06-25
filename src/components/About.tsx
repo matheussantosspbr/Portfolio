@@ -23,7 +23,7 @@ export default function About() {
         <div className="mx-auto">
           <div className="relative h-64 w-64 overflow-hidden rounded-2xl border-2 border-primary/40 shadow-[0_0_40px_-10px_var(--color-primary)]">
             <Image
-              src="/assets/imgs/perfil.webp"
+              src="/assets/imgs/perfil.avif"
               alt="Foto de Matheus Santos"
               fill
               sizes="256px"
