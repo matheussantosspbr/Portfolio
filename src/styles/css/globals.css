@@ -21,6 +21,109 @@
   }
 }
 
+/* ── Página /links — efeitos futuristas (HUD/neon) ─────────────────── */
+
+/* entrada escalonada dos cards */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* órbita girando (satélites ao redor do avatar) */
+@keyframes ringSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* halo de brilho pulsante atrás do avatar */
+@keyframes haloPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.06);
+  }
+}
+
+/* orbe de brilho flutuante no fundo */
+@keyframes floatGlow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translate(-50%, 0) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -10px) scale(1.08);
+  }
+}
+
+/* deriva da grade de fundo (sensação de profundidade) */
+@keyframes gridPan {
+  to {
+    background-position: 0 40px;
+  }
+}
+
+/* pulso do indicador de status "online" */
+@keyframes statusPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 184, 235, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(0, 184, 235, 0);
+  }
+}
+
+.fx-grid {
+  background-image:
+    linear-gradient(rgba(0, 184, 235, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 184, 235, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridPan 6s linear infinite;
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 60% at 50% 35%,
+    #000 25%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(
+    ellipse 80% 60% at 50% 35%,
+    #000 25%,
+    transparent 75%
+  );
+}
+
+.fx-rise {
+  animation: rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.fx-orbit {
+  animation: ringSpin 14s linear infinite;
+}
+
+.fx-halo {
+  animation: haloPulse 4s ease-in-out infinite;
+}
+
+.fx-orb {
+  animation: floatGlow 7s ease-in-out infinite;
+}
+
+.fx-status-dot {
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
 @layer base {
   /* rolagem suave ao clicar nos links da navegação */
   html {
