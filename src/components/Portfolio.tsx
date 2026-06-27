@@ -4,8 +4,8 @@ import SectionTitle from "./SectionTitle";
 
 const projects: Project[] = [
   {
-    title: "Portifólio",
-    description: "Breve descrição do problema que esse projeto resolve.",
+    title: "Portfólio",
+    description: "Portfólio pessoal desenvolvido para centralizar meus projetos, experiências e formas de contato em um só lugar, com foco em performance e design responsivo.",
     tags: ["Next.js", "TypeScript", "Tailwind", "Nginx"],
     image:"/assets/imgs/projects/portfolio.avif",
     repoUrl: "https://github.com/matheussantosspbr/Portfolio",
