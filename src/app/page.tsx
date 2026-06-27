@@ -25,7 +25,7 @@ export default function Home() {
         />
         <div className="relative flex flex-col items-center">
           <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl border-b border-white/30 pb-2.5">
-            Matheus SantosS
+            Matheus Santos
           </h1>
           <p className="mt-3 text-lg font-medium text-gray-300 sm:text-xl">
             Desenvolvedor Full Stack
