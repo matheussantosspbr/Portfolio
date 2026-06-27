@@ -1,7 +1,6 @@
 import Link from "next/link";
 import SectionTitle from "./SectionTitle";
 
-// ── Estudos de caso (1 a 3) — problema → decisões → resultado ─────────
 interface CaseStudy {
   title: string;
   context: string;

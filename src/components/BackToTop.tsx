@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-/** Botão fixo no canto inferior direito que aparece após rolar a página. */
 export default function BackToTop() {
   const [show, setShow] = useState(false);
 

@@ -3,7 +3,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 import SectionTitle from "./SectionTitle";
 
-// ── Contribuições open source — edite à vontade ──────────────────────
 interface Contribution {
   repo: string;
   description: string;

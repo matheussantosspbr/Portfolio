@@ -4,15 +4,10 @@ import { type ReactNode, useEffect, useRef, useState } from "react";
 
 interface RevealProps {
   children: ReactNode;
-  /** atraso da animação em ms (para efeito escalonado) */
   delay?: number;
   className?: string;
 }
 
-/**
- * Anima a entrada do conteúdo (fade + slide-up) quando ele entra na viewport.
- * Respeita `prefers-reduced-motion`: nesse caso mostra direto, sem animar.
- */
 export default function Reveal({
   children,
   delay = 0,

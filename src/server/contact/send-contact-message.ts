@@ -17,11 +17,7 @@ export type SendContactResult =
   | { ok: true }
   | { ok: false; error: ContactErrorCode; status: number };
 
-/**
- * Valida (presença) e envia a mensagem de contato via Resend. Retorna um
- * resultado discriminado; o mapeamento para HTTP fica a cargo do route handler.
- * Erros inesperados (ex.: falha de rede no Resend) propagam para o handler tratar.
- */
+
 export async function sendContactMessage(
   input: ContactInput,
 ): Promise<SendContactResult> {
@@ -39,8 +35,6 @@ export async function sendContactMessage(
     to: RESEND_EMAIL_TO || "",
     template: {
       id: "contact",
-      // phone é opcional; quando ausente é omitido no JSON. O tipo do Resend
-      // não admite undefined, daí a asserção — comportamento idêntico ao anterior.
       variables: { name, email, message, phone } as Record<string, string>,
     },
   });

@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { getClientIp } from "@/server/http/client-ip";
 import { sendContactMessage } from "@/server/contact/send-contact-message";
+import { getClientIp } from "@/server/http/client-ip";
 import { withApiGuard } from "@/server/security/guard";
 import { isHoneypotTriggered } from "@/server/security/honeypot";
 import {

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 
-// Destaques rápidos — edite à vontade
 const highlights = [
   { icon: "fa-solid fa-location-dot", label: "São Paulo, Brasil" },
   {

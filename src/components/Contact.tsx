@@ -13,12 +13,9 @@ import {
 import SectionTitle from "./SectionTitle";
 
 type Field = "name" | "email" | "message";
-// `phone` é opcional: faz parte do estado e do envio, mas não da validação.
 type FormState = Record<Field, string> & { phone: string };
 type Errors = Partial<Record<Field, string>>;
 
-// Site key pública do Turnstile (segura no client). Se ausente, o widget não
-// é renderizado e o backend não exige Turnstile.
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 interface TurnstileApi {
@@ -102,7 +99,6 @@ export default function Contact() {
     });
   }, []);
 
-  // injeta o script do Turnstile e renderiza o widget (só se houver site key)
   useEffect(() => {
     if (!TURNSTILE_SITE_KEY) return;
     const id = "cf-turnstile-script";
@@ -151,7 +147,6 @@ export default function Contact() {
       return;
     }
 
-    // Turnstile configurado mas ainda não resolvido
     if (TURNSTILE_SITE_KEY && !turnstileToken) {
       setStatus("error");
       setFeedback("Confirme que você não é um robô antes de enviar.");
@@ -220,7 +215,6 @@ export default function Contact() {
       />
 
       <div className="grid gap-10 md:grid-cols-[1fr_18rem]">
-        {/* Formulário */}
         <form
           onSubmit={handleSubmit}
           noValidate

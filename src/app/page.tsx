@@ -1,14 +1,14 @@
 import Link from "next/link";
 import About from "@/components/About";
+import Reveal from "@/components/animations/Reveal";
 import BackToTop from "@/components/BackToTop";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
-import Divider from "@/components/Divider";
 import Experience from "@/components/Experience";
 import OpenSource from "@/components/OpenSource";
 import Portfolio from "@/components/Portfolio";
-import Reveal from "@/components/Reveal";
 import Skills from "@/components/Skills";
+import Divider from "@/components/ui/Divider";
 import Layout from "@/layout/Layout";
 
 export default function Home() {
@@ -87,7 +87,7 @@ export default function Home() {
         <Certifications />
       </Reveal>
 
-      <Divider/>
+      <Divider />
 
       <Reveal>
         <Contact />

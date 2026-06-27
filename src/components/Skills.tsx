@@ -1,6 +1,5 @@
 import SectionTitle from "./SectionTitle";
 
-// ── Skills por categoria — edite à vontade ───────────────────────────
 interface Category {
   name: string;
   description: string;

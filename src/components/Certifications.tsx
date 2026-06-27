@@ -1,7 +1,6 @@
 import Link from "next/link";
 import SectionTitle from "./SectionTitle";
 
-// ── Certificações e cursos — edite à vontade ─────────────────────────
 interface Certification {
   name: string;
   institution: string;

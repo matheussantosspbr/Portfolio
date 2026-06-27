@@ -1,14 +1,3 @@
-// ── Template de tecnologia / stack ───────────────────────────────────
-// Copie este formato no array `techs` em src/app/page.tsx:
-//
-//   { name: "React",      icon: "fa-brands fa-react" }
-//   { name: "Node.js",    icon: "fa-brands fa-node-js" }
-//   { name: "TypeScript", icon: "fa-solid fa-code" }   // sem ícone de marca? use um fa-solid
-//
-// Ícones de marca disponíveis no Font Awesome (já carregado no projeto):
-//   fa-react · fa-node-js · fa-js · fa-html5 · fa-css3-alt · fa-python
-//   fa-php · fa-java · fa-git-alt · fa-github · fa-docker · fa-figma · fa-aws
-// ─────────────────────────────────────────────────────────────────────
 export interface Tech {
   name: string;
   icon: string;

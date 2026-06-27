@@ -1,4 +1,4 @@
-import Reveal from "./Reveal";
+import Reveal from "./animations/Reveal";
 import SectionTitle from "./SectionTitle";
 
 // ── Sua experiência ──────────────────────────────────────────────────

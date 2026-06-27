@@ -1,7 +1,6 @@
 import Link from "next/link";
 import SectionTitle from "./SectionTitle";
 
-// ── Artigos publicados — edite à vontade ─────────────────────────────
 interface Article {
   title: string;
   summary: string;

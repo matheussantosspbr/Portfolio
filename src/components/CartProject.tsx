@@ -1,18 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// ── Template de projeto ──────────────────────────────────────────────
-// Copie este formato no array `projects` em src/app/page.tsx:
-//
-//   {
-//     title: "Nome do Projeto",
-//     description: "Uma frase curta sobre o que o projeto faz.",
-//     image: "/assets/imgs/projeto-1.avif", // opcional — sem isso mostra um placeholder
-//     tags: ["Next.js", "TypeScript", "Tailwind"],
-//     repoUrl: "https://github.com/...",     // opcional
-//     liveUrl: "https://...",                // opcional
-//   }
-// ─────────────────────────────────────────────────────────────────────
 export interface Project {
   title: string;
   description: string;
@@ -32,7 +20,6 @@ export default function CartProject({
 }: Project) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_8px_30px_-6px_var(--color-primary)]">
-      {/* aspect-video reserva o espaço da imagem (evita layout shift) */}
       <div className="relative aspect-video w-full overflow-hidden">
         {image ? (
           <Image
