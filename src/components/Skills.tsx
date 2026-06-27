@@ -56,6 +56,11 @@ const categories: Category[] = [
     description: "Automações e bots para plataformas de comunicação.",
     stacks: ["Discord", "Discord.js", "Bots"],
   },
+  {
+    name: "Testes & Qualidade",
+    description: "Testes automatizados, linting e formatação para garantir qualidade e manutenibilidade.",
+    stacks: ["Vitest"]
+  }
 ];
 
 export default function Skills() {
