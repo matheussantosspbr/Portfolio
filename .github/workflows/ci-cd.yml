@@ -1,24 +1,26 @@
-name: Deploy to VPS
+name: Deploy (rolling, zero-downtime)
 
 on:
   push:
     branches: [master]
 
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy via SSH
+      - name: Conectar no VPS e rodar o rolling deploy
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
           script: |
-            set -e
-            cd ~/apps/portfolio
-            git pull origin master
-            rm -rf node_modules
-            npm ci
-            npm run build
-            pm2 reload portfolio --update-env
+            set -euo pipefail
+            cd "${{ secrets.VPS_PROJECT_PATH }}"
+            git pull --ff-only
+            ./scripts/deploy.sh

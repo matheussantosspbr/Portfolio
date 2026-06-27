@@ -1,0 +1,36 @@
+# Dependências e artefatos de build (reinstalados/recompilados dentro da imagem)
+node_modules
+.next
+out
+build
+dist
+
+# Metadados e versionamento
+.git
+.gitignore
+.github
+
+# Ambiente e segredos — NUNCA entram na imagem
+.env
+.env.*
+!.env.example
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Ferramentas, testes e configs de dev
+.vscode
+.idea
+coverage
+*.log
+npm-debug.log*
+
+# SO / temporários
+.DS_Store
+Thumbs.db
+
+# Documentação que não afeta o runtime
+README.md
+CLAUDE.md

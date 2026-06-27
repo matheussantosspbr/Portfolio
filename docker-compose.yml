@@ -1,0 +1,40 @@
+services:
+  app1:
+    build: .
+    image: portfolio:latest
+    hostname: app1
+    container_name: portfolio-application-1
+    restart: unless-stopped
+    networks:
+      private-networks:
+        aliases:
+          - app
+
+  app2:
+    image: portfolio:latest
+    hostname: app2
+    container_name: portfolio-application-2
+    restart: unless-stopped
+    depends_on:
+      - app1
+    networks:
+      private-networks:
+        aliases:
+          - app
+
+  nginx:
+    image: nginx:alpine
+    container_name: portfolio-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app1
+      - app2
+    networks:
+      - private-networks
+
+networks:
+  private-networks:
+    driver: bridge
