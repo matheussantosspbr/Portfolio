@@ -49,7 +49,7 @@ const links: LinkItem[] = [
   },
   {
     label: "Baixar currículo",
-    href: "/assets/curriculo.pdf",
+    href: "/assets/pdfs/curriculo.pdf",
     icon: "fa-solid fa-download",
   },
 ];
