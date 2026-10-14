@@ -8,10 +8,24 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const title = "Matheus Santos — Desenvolvedor Full Stack";
+const description =
+  "Portfólio de Matheus Santos, desenvolvedor Full Stack. Veja projetos, estudos de caso, experiência profissional e as tecnologias que utilizo.";
+
 export const metadata: Metadata = {
-  title: "Matheus Santos — Desenvolvedor Full Stack",
-  description:
-    "Portfólio de Matheus Santos, desenvolvedor Full Stack. Veja projetos, estudos de caso, experiência profissional e as tecnologias que utilizo.",
+  metadataBase: new URL("https://matheussantos.tech"),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "/",
+    siteName: "Matheus Santos",
+    title,
+    description,
+  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function RootLayout({

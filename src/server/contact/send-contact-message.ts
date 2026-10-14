@@ -17,7 +17,6 @@ export type SendContactResult =
   | { ok: true }
   | { ok: false; error: ContactErrorCode; status: number };
 
-
 export async function sendContactMessage(
   input: ContactInput,
 ): Promise<SendContactResult> {

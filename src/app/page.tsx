@@ -11,9 +11,26 @@ import Skills from "@/components/Skills";
 import Divider from "@/components/ui/Divider";
 import Layout from "@/layout/Layout";
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Matheus Santos",
+  jobTitle: "Desenvolvedor Full Stack",
+  url: "https://matheussantos.tech",
+  sameAs: [
+    "https://github.com/matheussantosspbr",
+    "https://www.linkedin.com/in/matheussantosspbr/",
+  ],
+};
+
 export default function Home() {
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD estático, sem input do usuário
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       {/* Hero */}
       <section
         id="inicio"

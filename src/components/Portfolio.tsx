@@ -10,7 +10,7 @@ const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind", "Nginx"],
     image: "/assets/imgs/projects/portfolio.avif",
     repoUrl: "https://github.com/matheussantosspbr/Portfolio",
-    liveUrl: "http://matheussantos.tech",
+    liveUrl: "https://matheussantos.tech",
   },
   {
     title: "VaiperUI",

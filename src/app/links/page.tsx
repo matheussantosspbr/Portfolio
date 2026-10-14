@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Matheus Santos — Links",
   description:
     "Todos os meus links em um só lugar: portfólio, redes sociais e contato.",
+  alternates: { canonical: "/links" },
 };
 
 interface LinkItem {

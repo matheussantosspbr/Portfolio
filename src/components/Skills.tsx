@@ -58,9 +58,10 @@ const categories: Category[] = [
   },
   {
     name: "Testes & Qualidade",
-    description: "Testes automatizados, linting e formatação para garantir qualidade e manutenibilidade.",
-    stacks: ["Vitest"]
-  }
+    description:
+      "Testes automatizados, linting e formatação para garantir qualidade e manutenibilidade.",
+    stacks: ["Vitest"],
+  },
 ];
 
 export default function Skills() {
