@@ -12,6 +12,25 @@ const projects: Project[] = [
     repoUrl: "https://github.com/matheussantosspbr/Portfolio",
     liveUrl: "http://matheussantos.tech",
   },
+  {
+    title: "VaiperUI",
+    description:
+      "Biblioteca de componentes React para Tailwind CSS: Button, Input e Select acessíveis, com máscaras de input, efeito ripple e tema por uma única cor (customColor).",
+    tags: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Storybook",
+      "Vitest",
+      "Turborepo",
+      "pnpm",
+      "Biome",
+    ],
+    image: "/assets/imgs/projects/vaiperui.avif",
+    repoUrl: "https://github.com/vaiperliotech/vaiperui",
+    liveUrl: "https://vaiperui.vercel.app",
+  },
 ];
 
 export default function Portfolio() {
